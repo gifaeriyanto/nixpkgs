@@ -16,7 +16,7 @@ in
 
       signing = {
         key = gifaeriyanto.signingKey;
-        signByDefault = false;
+        signByDefault = true;
         gpgPath = "gpg";
       };
 
