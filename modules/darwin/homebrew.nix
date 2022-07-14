@@ -57,6 +57,7 @@ in
     "firefox"
     "google-chrome"
     "iterm2"
+    "notion"
     "spotify"
     "vlc"
   ];
