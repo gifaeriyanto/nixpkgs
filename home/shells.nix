@@ -18,6 +18,7 @@
         # Nix related
         drb = "darwin-rebuild build --flake ~/.config/nixpkgs/";
         drs = "darwin-rebuild switch --flake ~/.config/nixpkgs/";
+        dr = "darwin-rebuild switch --flake";
 
         # is equivalent to: nix build --recreate-lock-file
         flakeup = "nix flake update ~/.config/nixpkgs/";
