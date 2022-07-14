@@ -31,12 +31,5 @@ in
             done
           ''
         );
-
-    gitDefaultBranch =
-      runCommands (
-        ''
-          sudo git config --global init.defaultBranch main
-        ''
-      );
   };
 }

@@ -6,6 +6,13 @@ let
     email = "gifa.eriyanto@gmail.com";
     signingKey = "78621E1AED00697E";
   };
+
+  gitDefaultConfig = {
+    user = gifaeriyanto;
+    init = {
+      defaultBranch = "main";
+    };
+  };
 in
 {
   programs = {
@@ -41,13 +48,12 @@ in
 
       includes = [
         {
-          condition = "gitdir:~/.local/share/";
-          contents.user = gifaeriyanto;
+          contents = gitDefaultConfig;
         }
 
         {
           condition = "gitdir:~/.config/nixpkgs/";
-          contents.user = gifaeriyanto;
+          contents.gpgSign = false;
         }
       ];
     };
