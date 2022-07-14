@@ -4,7 +4,6 @@
     Clicking = true;
   };
 
-
   # Finder
   system.defaults.finder = {
     FXEnableExtensionChangeWarning = true;

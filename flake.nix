@@ -56,7 +56,7 @@
                   nixpkgs = nixpkgsConfig;
 
                   # Configure default shell for gifaeriyanto to fish
-                    users.users.gifaeriyanto.shell = pkgs.fish;
+                  users.users.gifaeriyanto.shell = pkgs.fish;
                   # Somehow this 👆 doesn't work.
                   # So I did this instead: https://stackoverflow.com/a/26321141/3187014
                   # 
