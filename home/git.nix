@@ -8,9 +8,11 @@ let
   };
 
   gitDefaultConfig = {
-    user = gifaeriyanto;
-    init = {
-      defaultBranch = "main";
+    contents = {
+      user = gifaeriyanto;
+      init = {
+        defaultBranch = "main";
+      };
     };
   };
 in
@@ -47,13 +49,11 @@ in
       diff-so-fancy.enable = true;
 
       includes = [
-        {
-          contents = gitDefaultConfig;
-        }
+        gitDefaultConfig
 
         {
           condition = "gitdir:~/.config/nixpkgs/";
-          contents.gpgSign = false;
+          contents.commit.gpgSign = false;
         }
       ];
     };
