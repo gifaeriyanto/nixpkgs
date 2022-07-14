@@ -75,26 +75,6 @@
       zsh
     ];
 
-    # Apps
-    # `home-manager` currently has issues adding them to `~/Applications`
-    # Issue: https://github.com/nix-community/home-manager/issues/1341
-    # Therefore, we install them directly using Nix built-in options.
-    # https://search.nixos.org/options?channel=22.05&show=environment.systemPackages&from=0&size=50&sort=relevance&type=packages&query=environment.systemPackages
-    # This way, the applications will be symlinked correctly in the ~/Applications directory
-    # and show up in macOS Launchpad.
-    systemPackages = with pkgs; [
-      ##################################
-      # Terminal
-      ##################################
-      iterm2
-
-      ##################################
-      # Instant Messaging
-      ##################################
-      # discord
-      # slack
-    ];
-
     variables = {
       SHELL = "${pkgs.fish}/bin/fish";
     };

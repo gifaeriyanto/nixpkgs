@@ -44,11 +44,20 @@ in
     Keynote = 409183694;
     Numbers = 409203825;
     Pages = 409201541;
+    Slack = 803453959;
+    Telegram = 747648890;
+    Whatsapp = 1147396723;
     Xcode = 497799835;
   };
 
   # If an app isn't available in the Mac App Store, or the version in the App Store has
   # limitiations, e.g., Transmit, install the Homebrew Cask.
   homebrew.casks = [
+    "discord"
+    "firefox"
+    "google-chrome"
+    "iterm2"
+    "spotify"
+    "vlc"
   ];
 }
