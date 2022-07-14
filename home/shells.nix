@@ -61,6 +61,96 @@
       settings = {
         add_newline = true;
         command_timeout = 1000;
+        cmd_duration = {
+          format = " [$duration]($style) ";
+          style = "bold #EC7279";
+          show_notifications = true;
+        };
+        directory = {
+          truncate_to_repo = false;
+        };
+        nix_shell = {
+          format = " [$symbol$state]($style) ";
+        };
+        battery = {
+          full_symbol = "🔋 ";
+          charging_symbol = "⚡️ ";
+          discharging_symbol = "💀 ";
+        };
+        git_branch = {
+          format = "[$symbol$branch]($style) ";
+          symbol = " ";
+        };
+        gcloud = {
+          format = "[$symbol$active]($style) ";
+          symbol = "  ";
+        };
+        aws = {
+          symbol = "  ";
+        };
+        buf = {
+          symbol = " ";
+        };
+        c = {
+          symbol = " ";
+        };
+        conda = {
+          symbol = " ";
+        };
+        dart = {
+          symbol = " ";
+        };
+        directory = {
+          read_only = " ";
+        };
+        docker_context = {
+          symbol = " ";
+        };
+        elixir = {
+          symbol = " ";
+        };
+        elm = {
+          symbol = " ";
+        };
+        golang = {
+          symbol = " ";
+        };
+        haskell = {
+          symbol = " ";
+        };
+        hg_branch = {
+          symbol = " ";
+        };
+        java = {
+          symbol = " ";
+        };
+        julia = {
+          symbol = " ";
+        };
+        memory_usage = {
+          symbol = " ";
+        };
+        nim = {
+          symbol = " ";
+        };
+        nix_shell = {
+          symbol = " ";
+        };
+        nodejs = {
+          symbol = " ";
+        };
+        package = {
+          symbol = " ";
+        };
+        python = {
+          symbol = " ";
+        };
+        spack = {
+          symbol = "🅢 ";
+        };
+        rust = {
+          symbol = " ";
+        };
       };
     };
   };
