@@ -1,7 +1,7 @@
 { config, lib, pkgs, ... }:
 
 let
-  action = content:
+  runCommands = content:
     lib.hm.dag.entryAfter [ "writeBoundary" ] (
       lib.optionalString (pkgs.stdenv.isDarwin) (content)
     );
@@ -9,7 +9,7 @@ in
 {
   home.activation = {
     linkApplications =
-      action
+      runCommands
         (
           let
             apps = pkgs.buildEnv {
@@ -33,10 +33,9 @@ in
         );
 
     gitDefaultBranch =
-      action (
+      runCommands (
         ''
           sudo git config --global init.defaultBranch main
-          echo berhasil
         ''
       );
   };
