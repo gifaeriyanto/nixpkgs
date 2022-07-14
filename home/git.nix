@@ -43,13 +43,11 @@ in
         {
           condition = "gitdir:~/.local/share/";
           contents.user = gifaeriyanto;
-          contents.commit.gpgSign = true;
         }
 
         {
           condition = "gitdir:~/.config/nixpkgs/";
           contents.user = gifaeriyanto;
-          contents.commit.gpgSign = false;
         }
       ];
     };
