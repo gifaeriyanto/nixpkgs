@@ -52,6 +52,7 @@ in
 
   homebrew.brews = [
     "n"
+    "pinentry-mac"
     "yarn"
   ];
 
