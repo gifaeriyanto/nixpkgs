@@ -101,6 +101,15 @@ Login to github via cli to validate your account
 
 ```bash
 gh auth login
-# Fill password with your personal access token
-# See https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token
 ```
+
+Fill password with your personal access token. See [here](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) for more information.
+
+## References
+
+Inspired by:
+
+- https://github.com/r17x/nixpkgs
+- https://github.com/malob/nixpkgs
+- https://gist.github.com/jmatsushita/5c50ef14b4b96cb24ae5268dab613050
+- https://github.com/zainfathoni/nixpkgs
