@@ -34,50 +34,53 @@
           })
         );
       };
+
+      nixDarwinCommonModules = attrValues self.darwinModules ++ [
+        # Main `nix-darwin` config
+        ./modules/darwin
+
+        # `home-manager` module
+        home-manager.darwinModules.home-manager
+        (
+          { pkgs, ... }:
+          {
+            nixpkgs = nixpkgsConfig;
+
+            # Configure default shell for gifaeriyanto to fish
+            users.users.gifaeriyanto.shell = pkgs.fish;
+            # Somehow this 👆 doesn't work.
+            # So I did this instead: https://stackoverflow.com/a/26321141/3187014
+            # 
+            # ```shell
+            # $ sudo sh -c "echo $(which fish) >> /etc/shells"
+            # $ chsh -s $(which fish)
+            # ```
+
+            # `home-manager` config
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.gifaeriyanto = import ./home;
+          }
+        )
+      ];
     in
     {
       darwinConfigurations = {
         gifaeriyanto = {
           intel = darwinSystem {
             system = "x86_64-darwin";
-            modules = [ ./configuration.nix ];
+            modules = nixDarwinCommonModules;
           };
 
           m1 = darwinSystem {
             system = "aarch64-darwin";
-            modules = attrValues self.darwinModules ++ [
-              # Main `nix-darwin` config
-              ./configuration.nix
-              # `home-manager` module
-              home-manager.darwinModules.home-manager
-              (
-                { pkgs, ... }:
-                {
-                  nixpkgs = nixpkgsConfig;
-
-                  # Configure default shell for gifaeriyanto to fish
-                  users.users.gifaeriyanto.shell = pkgs.fish;
-                  # Somehow this 👆 doesn't work.
-                  # So I did this instead: https://stackoverflow.com/a/26321141/3187014
-                  # 
-                  # ```shell
-                  # $ sudo sh -c "echo $(which fish) >> /etc/shells"
-                  # $ chsh -s $(which fish)
-                  # ```
-
-                  # `home-manager` config
-                  home-manager.useGlobalPkgs = true;
-                  home-manager.useUserPackages = true;
-                  home-manager.users.gifaeriyanto = import ./home;
-                }
-              )
-            ];
+            modules = nixDarwinCommonModules;
           };
         };
       };
 
       darwinModules = {
-        gifa-defaults = import ./modules/darwin/defaults.nix;
+        gifa-system = import ./modules/darwin/system.nix;
         gifa-homebrew = import ./modules/darwin/homebrew.nix;
 
         programs-nix-index =
@@ -103,7 +106,7 @@
               '';
             };
           };
-        };
+      };
 
       overlays = {
         # Overlay useful on Macs with Apple Silicon
