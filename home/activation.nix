@@ -18,6 +18,8 @@ in
               pathsToLink = "/Applications";
             };
           in
+          # TODO: update baseDir path to ~/Applications,
+          # currently apps that installed under home manager not shown in launchpad and spotlight search
           ''
             baseDir="/Applications/Home Manager Apps"
             if [ -d "$baseDir" ]; then
