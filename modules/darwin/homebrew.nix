@@ -66,5 +66,6 @@ in
     "notion"
     "spotify"
     "vlc"
+    "zoom"
   ];
 }
