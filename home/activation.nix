@@ -31,5 +31,15 @@ in
             done
           ''
         );
+
+    installNode =
+      runCommands (
+        ''
+          sudo chown -R $(whoami) /usr/local/n
+          n lts
+          n install 16
+          n install 14
+        ''
+      );
   };
 }
