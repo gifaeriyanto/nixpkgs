@@ -50,7 +50,7 @@ in
     Xcode = 497799835;
   };
 
-  homebrew.core = [
+  homebrew.brews = [
     "n"
   ];
 
