@@ -44,11 +44,6 @@ in
 
           # take ownership of Node.js install destination folders
           sudo chown -R $(whoami) /usr/local/bin /usr/local/lib /usr/local/include /usr/local/share
-
-          # install nodes
-          n lts
-          n install 16
-          n install 14
         ''
       );
   };
