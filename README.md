@@ -43,6 +43,10 @@ nix build .#darwinConfigurations.gifaeriyanto.m1.system
 6. Apply result
 
 ```bash
+# for Intel Chip
+./result/sw/bin/darwin-rebuild switch --flake .#gifaeriyanto.intel
+
+# for M1 Chip
 ./result/sw/bin/darwin-rebuild switch --flake .#gifaeriyanto.m1
 ```
 
