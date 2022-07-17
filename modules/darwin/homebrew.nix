@@ -65,6 +65,7 @@ in
     "iterm2"
     "notion"
     "spotify"
+    "steam"
     "vlc"
     "zoom"
   ];
