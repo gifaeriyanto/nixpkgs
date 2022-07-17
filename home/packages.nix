@@ -40,6 +40,7 @@
       # Shell Integration
       ##################################
       home-manager
+      neofetch
 
       ##################################
       # Development Tools
