@@ -52,6 +52,13 @@ nix build .#darwinConfigurations.gifaeriyanto.m1.system
 
 ## Notes (after installation)
 
+### Default Shell
+
+1. Go to `System References`
+2. Select `User & Groups`
+3. Unlock access and right click on your user, choose `Advanced Options`
+4. Change `Login Shell` to `/run/current-system/sw/bin/fish` (or another shell path source)
+
 ### iTerm2
 
 Import profile, [here](https://gist.github.com/gifaeriyanto/1c2cfea240fdcf9360afe9cb51ae5a4b) is my JSON profile.
