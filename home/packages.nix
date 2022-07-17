@@ -48,6 +48,7 @@
       ##################################
       gh
       ghq
+      micro
       postman
       vscode
     ];
