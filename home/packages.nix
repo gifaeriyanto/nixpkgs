@@ -39,6 +39,7 @@
       ##################################
       # Shell Integration
       ##################################
+      bottom
       home-manager
       neofetch
 
