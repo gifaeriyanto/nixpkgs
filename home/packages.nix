@@ -48,6 +48,7 @@
       # Development Tools
       ##################################
       docker
+      docker-compose
       gh
       ghq
       micro
