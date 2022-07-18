@@ -49,24 +49,21 @@ in
         ''
       );
 
-    # TODO: run `jq` in activation
-    # ----------------------------
-    # microConfig =
-    #   runCommands (
-    #     ''
-    #       microDir=~/.config/micro
-    #       settingFile=$microDir/settings.json
+    microConfig =
+      runCommands (
+        ''
+          microDir=~/.config/micro
+          settingFile=$microDir/settings.json
 
-    #       # check if `settings.json` doesn't exist, create the file
-    #       if ! [ -f "$settingFile" ]; then
-    #         mkdir -p $microDir
-    #         echo "{}" > $settingFile
-    #       fi
+          # check if `settings.json` doesn't exist, create the file
+          if ! [ -f "$settingFile" ]; then
+            mkdir -p $microDir
+            echo "{}" > $settingFile
+          fi
           
-    #       # add default setting
-    #       jq '.colorscheme = "solarized"' $settingFile > "tmp" && mv "tmp" $settingFile
-    #     ''
-    #   );
-
+          # add default setting
+          ${pkgs.jq}/bin/jq '.colorscheme = "solarized"' $settingFile > "tmp" && mv "tmp" $settingFile
+        ''
+      );
   };
 }
