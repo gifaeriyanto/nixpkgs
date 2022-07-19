@@ -14,9 +14,13 @@
   };
 
   # Launchd
-  launchd.launchd.SoftResourceLimits = {
-    # See: https://gist.github.com/tombigel/d503800a282fcadbee14b537735d202c
-    NumberOfFiles = 200000;
-    NumberOfProcesses = 2048;
+  launchd.agents = {
+    gifaeriyanto = {
+      serviceConfig.SoftResourceLimits = {
+        # See: https://gist.github.com/tombigel/d503800a282fcadbee14b537735d202c
+        NumberOfFiles = 200000;
+        NumberOfProcesses = 2048;
+      };
+    };
   };
 }
