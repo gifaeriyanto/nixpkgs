@@ -49,6 +49,7 @@
       ##################################
       docker
       docker-compose
+      docker-machine
       gh
       ghq
       micro
