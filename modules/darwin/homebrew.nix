@@ -62,6 +62,7 @@ in
   homebrew.casks = [
     "discord"
     "docker"
+    "docker-compose"
     "firefox"
     "google-chrome"
     "iterm2"
