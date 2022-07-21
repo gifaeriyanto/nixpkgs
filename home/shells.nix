@@ -18,7 +18,7 @@
           else
             echo "Branch name is not specified"
           end
-        ''
+        '';
 
         git-lazy-rebase = ''
           set branch $argv[1]
