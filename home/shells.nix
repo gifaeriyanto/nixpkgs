@@ -7,6 +7,40 @@
       enable = true;
 
       functions = {
+        git-update-main = ''
+          set branch $argv[1]
+          set currentBranch $(git rev-parse --abbrev-ref HEAD)
+
+          if test $branch
+            git checkout $branch
+            git pull origin $branch
+            git checkout $currentBranch
+          else
+            echo "Branch name is not specified"
+          end
+        ''
+
+        git-lazy-rebase = ''
+          set branch $argv[1]
+
+          if test $branch
+            git-update-main $branch
+            git rebase $branch
+          else
+            echo "Branch name is not specified"
+          end
+        '';
+
+        git-lazy-pull = ''
+          set branch $argv[1]
+
+          if test $branch
+            git-update-main $branch
+            git pull origin $branch
+          else
+            echo "Branch name is not specified"
+          end
+        '';
       };
 
       # Fish abbreviations
