@@ -33,6 +33,12 @@
       };
 
       shellInit = ''
+        # See: https://gist.github.com/tombigel/d503800a282fcadbee14b537735d202c
+        # Max open files limit
+        ulimit -n 200000
+        # Max processes limit
+        ulimit -u 2048
+
         # Fish color
         set -U fish_color_command 6CB6EB --bold
         set -U fish_color_redirection DEB974
