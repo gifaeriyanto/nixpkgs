@@ -42,7 +42,6 @@ in
   # Prefer installing application from the Mac App Store
   homebrew.masApps = {
     "1Password" = 1333542190;
-    "My Cloud Home" = 1237361683;
     Keynote = 409183694;
     Numbers = 409203825;
     Pages = 409201541;
