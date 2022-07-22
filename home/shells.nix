@@ -85,6 +85,15 @@
 
       plugins = with pkgs.fishPlugins;[
         {
+          name = "thefuck";
+          src = pkgs.fetchFromGitHub {
+            owner = "oh-my-fish";
+            repo = "plugin-thefuck";
+            rev = "6c9a926d045dc404a11854a645917b368f78fc4d";
+            sha256 = "1n6ibqcgsq1p8lblj334ym2qpdxwiyaahyybvpz93c8c9g4f9ipl";
+          };
+        }
+        {
           name = "z";
           src = pkgs.fetchFromGitHub {
             owner = "jethrokuan";
