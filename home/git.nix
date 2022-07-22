@@ -44,7 +44,7 @@ in
         rbc = "rebase --continue";
         rbi = "rebase -i";
         pf = "push --force-with-lease";
-        undo = "reset HEAD~";
+        undo = "reset --soft HEAD~";
       };
 
       diff-so-fancy.enable = true;
