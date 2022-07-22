@@ -116,6 +116,32 @@ gh auth login
 
 Fill password with your personal access token. See [here](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) for more information.
 
+### Fish Plugin
+
+When you want to install a fish plugin, you need to know the rev and sha256 code. To get those codes, do this:
+
+```bash
+nix-prefetch-git repo-url
+```
+
+Example:
+
+```bash
+❯ nix-prefetch-git https://github.com/jethrokuan/z
+...
+{
+  "url": "https://github.com/jethrokuan/z",
+  "rev": "85f863f20f24faf675827fb00f3a4e15c7838d76",
+  "date": "2022-04-08T19:43:37+02:00",
+  "path": "/nix/store/ngc6gybp6rs08ab2jqa2kdmsr9xzipm1-z",
+  "sha256": "1kaa0k9d535jnvy8vnyxd869jgs0ky6yg55ac1mxcxm8n0rh2mgq",
+  "fetchLFS": false,
+  "fetchSubmodules": false,
+  "deepClone": false,
+  "leaveDotGit": false
+}
+```
+
 ## References
 
 Inspired by:
