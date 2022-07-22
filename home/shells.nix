@@ -1,13 +1,19 @@
 { config, pkgs, lib, ... }:
 
 {
+  home = with pkgs;{
+    packages = with fishPlugins;[
+      thefuck
+    ];
+  };
+
   programs = {
     fish = {
       # Make Fish the default shell
       enable = true;
 
       functions = {
-        git-update-main = ''
+        git-branch-update = ''
           set branch $argv[1]
           set currentBranch $(git rev-parse --abbrev-ref HEAD)
 
@@ -24,7 +30,7 @@
           set branch $argv[1]
 
           if test $branch
-            git-update-main $branch
+            git-branch-update $branch
             git rebase $branch
           else
             echo "Branch name is not specified"
@@ -35,7 +41,7 @@
           set branch $argv[1]
 
           if test $branch
-            git-update-main $branch
+            git-branch-update $branch
             git pull origin $branch
           else
             echo "Branch name is not specified"
