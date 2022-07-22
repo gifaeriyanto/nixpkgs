@@ -66,6 +66,7 @@ in
     "google-chrome"
     "iterm2"
     "notion"
+    "raycast"
     "spotify"
     "steam"
     "vlc"
