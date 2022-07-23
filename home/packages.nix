@@ -39,6 +39,7 @@
       ##################################
       # Shell Integration
       ##################################
+      bat
       bottom
       home-manager
       jq
