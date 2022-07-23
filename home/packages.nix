@@ -34,7 +34,6 @@
       ################################## 
       cachix # to store cache binaries on cachix.org
       nix-prefetch-git # to get git signatures for fetchFromGit
-      comma # run without install
 
       ##################################
       # Shell Integration
