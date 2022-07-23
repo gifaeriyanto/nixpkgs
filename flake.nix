@@ -92,9 +92,7 @@
               # TODO: split below Fish configuration calls to always apply regardless of nix-index.enable settings above
               # https://fishshell.com/docs/3.5/interactive.html?highlight=fish_vi_key_bindings#vi-mode-commands
               # TODO: https://fishshell.com/docs/3.5/language.html#wildcards-globbing
-              programs.fish.interactiveShellInit = ''
-                fish_vi_key_bindings
-  
+              programs.fish.interactiveShellInit = ''  
                 function __fish_command_not_found_handler --on-event="fish_command_not_found"
                   ${if config.programs.fish.useBabelfish then ''
                   command_not_found_handle $argv
