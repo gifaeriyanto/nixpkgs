@@ -47,6 +47,10 @@
             echo "Branch name is not specified"
           end
         '';
+
+        git-commit-from = ''
+          git shortlog -s | grep $argv[1]
+        '';
       };
 
       # Fish abbreviations
