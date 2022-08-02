@@ -51,6 +51,19 @@
         git-commit-from = ''
           git shortlog -s | grep $argv[1]
         '';
+
+        git-delete-branch = ''
+          set branch $argv[1]
+
+          if test $branch
+            # delete branch locally
+            git branch -d $branch
+            # delete branch remotely
+            git push origin --delete $branch
+          else
+            echo "Branch name is not specified"
+          end
+        '';
       };
 
       # Fish abbreviations
