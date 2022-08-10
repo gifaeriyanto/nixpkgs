@@ -64,6 +64,23 @@
             echo "Branch name is not specified"
           end
         '';
+
+        git-spenmo-preview = ''
+          set branch $argv[1]
+          set previewBranch preview/$argv[1]
+
+          # delete existing branch (if any)
+          if test $(git rev-parse --verify $previewBranch)
+            git-delete-branch $previewBranch
+          end
+
+          # create preview
+          git checkout -b $previewBranch
+          git push origin $previewBranch
+
+          # back to working branch
+          git checkout $branch
+        '';
       };
 
       # Fish abbreviations
