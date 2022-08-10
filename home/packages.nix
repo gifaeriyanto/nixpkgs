@@ -48,7 +48,6 @@
       # Development Tools
       ##################################
       asciinema
-      asciinema-scenario
       gh
       ghq
       micro
