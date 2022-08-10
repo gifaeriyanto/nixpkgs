@@ -66,8 +66,8 @@
         '';
 
         git-spenmo-preview = ''
-          set branch $argv[1]
-          set previewBranch preview/$argv[1]
+          set currentBranch $(git rev-parse --abbrev-ref HEAD)
+          set previewBranch preview/$currentBranch
 
           # delete existing branch (if any)
           if test $(git rev-parse --verify $previewBranch)
@@ -79,7 +79,7 @@
           git push origin $previewBranch
 
           # back to working branch
-          git checkout $branch
+          git checkout $currentBranch
         '';
       };
 
