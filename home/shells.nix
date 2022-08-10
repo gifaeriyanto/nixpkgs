@@ -70,7 +70,7 @@
           set previewBranch preview/$currentBranch
 
           # delete existing branch (if any)
-          if test $(git rev-parse --verify $previewBranch)
+          if test $(git rev-parse --verify --quiet $previewBranch)
             git-delete-branch $previewBranch
           end
 
