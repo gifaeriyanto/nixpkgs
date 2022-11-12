@@ -1,6 +1,6 @@
 {
   description = "Gifa's home";
-  
+
   inputs = {
     # Package sets
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-22.05-darwin";

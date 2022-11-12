@@ -84,8 +84,7 @@
       };
 
       # Fish abbreviations
-      shellAbbrs = {
-      };
+      shellAbbrs = { };
 
       # Fish alias : register alias command in fish
       shellAliases = {
