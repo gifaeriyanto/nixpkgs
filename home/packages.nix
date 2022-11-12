@@ -51,6 +51,7 @@
       gh
       ghq
       micro
+      nixpkgs-fmt
       postman
       vscode
     ];
