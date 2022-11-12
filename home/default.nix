@@ -11,6 +11,6 @@
     ./git.nix
     ./packages.nix
     ./shells.nix
-    ./vim.nix
+    # ./vim.nix
   ];
 }  
