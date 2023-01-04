@@ -9,14 +9,13 @@
       "locked": {
         "lastModified": 1672753581,
         "narHash": "sha256-EIi2tqHoje5cE9WqH23ZghW28NOOWSUM7tcxKE1U9KI=",
-        "owner": "lnl7",
+        "owner": "LnL7",
         "repo": "nix-darwin",
         "rev": "3db1d870b04b13411f56ab1a50cd32b001f56433",
         "type": "github"
       },
       "original": {
-        "owner": "lnl7",
-        "ref": "master",
+        "owner": "LnL7",
         "repo": "nix-darwin",
         "type": "github"
       }
@@ -46,13 +45,13 @@
       "locked": {
         "lastModified": 1672829273,
         "narHash": "sha256-nS73nHJSgfqVJJT4/DbjnHs+EnLkyTCUDRdNu1h+LEE=",
-        "owner": "nixos",
+        "owner": "NixOS",
         "repo": "nixpkgs",
         "rev": "97d92681867f18ea249659c806f7efa3075c00f3",
         "type": "github"
       },
       "original": {
-        "owner": "nixos",
+        "owner": "NixOS",
         "ref": "nixpkgs-22.11-darwin",
         "repo": "nixpkgs",
         "type": "github"
