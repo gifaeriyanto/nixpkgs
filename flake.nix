@@ -58,16 +58,15 @@
     in
     {
       darwinConfigurations = {
-        gifaeriyanto = {
-          intel = darwinSystem {
-            system = "x86_64-darwin";
-            modules = nixDarwinCommonModules;
-          };
-
-          m1 = darwinSystem {
-            system = "aarch64-darwin";
-            modules = nixDarwinCommonModules;
-          };
+        gifaeriyanto = darwinSystem {
+          # system = "x86_64-darwin"; // if using intel
+          system = "aarch64-darwin";
+          modules = nixDarwinCommonModules ++ [
+            {
+              networking.computerName = "gifaeriyanto";
+              networking.hostName = "gifaeriyanto";
+            }
+          ];
         };
       };
 
