@@ -24,10 +24,18 @@ in
   '';
 
   homebrew.enable = true;
-  homebrew.autoUpdate = true;
-  homebrew.cleanup = "zap";
-  homebrew.global.brewfile = true;
-  homebrew.global.noLock = true;
+
+  homebrew.global = {
+    brewfile = true;
+    lockfiles = true;
+  };
+
+  homebrew.onActivation = {
+    autoUpdate = true;
+    cleanup = "zap";
+    upgrade = true;
+  };
+
 
   homebrew.taps = [
     "homebrew/cask"

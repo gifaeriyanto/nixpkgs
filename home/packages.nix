@@ -17,7 +17,7 @@
     sessionVariables = {
       # Silence Fish greeting
       # https://fishshell.com/docs/current/cmds/fish_greeting.html
-      fish_greeting = null;
+      fish_greeting = "";
     };
 
     packages = with pkgs; [

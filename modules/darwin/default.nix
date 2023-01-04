@@ -1,27 +1,13 @@
 { pkgs, config, lib, ... }:
 {
-  # Nix configuration -------------------------------------------------------
-
-  users.nix.configureBuildUsers = true;
-
   # Used for backwards compatibility, please read the changelog before changing.
   # $ darwin-rebuild changelog
   system.stateVersion = 4;
 
+  # Nix configuration -------------------------------------------------------
   nix = {
-    binaryCaches = [
-      "https://cache.nixos.org/"
-      "https://gifaeriyanto.cachix.org/"
-    ];
 
-    binaryCachePublicKeys = [
-      "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
-      "gifaeriyanto.cachix.org-1:j7EC4jvKpt9K25C0tS2kSX8XFdYBEmVLk/7APU4+7aE="
-    ];
-
-    trustedUsers = [
-      "@admin"
-    ];
+    configureBuildUsers = true;
 
     # Enable experimental nix command and flakes
     # package = pkgs.nixUnstable;
@@ -32,6 +18,22 @@
     + lib.optionalString (pkgs.system == "aarch64-darwin") ''
       extra-platforms = x86_64-darwin aarch64-darwin
     '';
+
+    settings = {
+      trustedUsers = [
+        "@admin"
+      ];
+
+      substituters = [
+        "https://cache.nixos.org/"
+        "https://gifaeriyanto.cachix.org/"
+      ];
+
+      trusted-public-keys = [
+        "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
+        "gifaeriyanto.cachix.org-1:j7EC4jvKpt9K25C0tS2kSX8XFdYBEmVLk/7APU4+7aE="
+      ];
+    };
   };
 
   programs = {
