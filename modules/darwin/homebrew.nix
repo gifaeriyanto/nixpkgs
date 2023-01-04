@@ -66,6 +66,7 @@ in
     "iterm2"
     "notion"
     "raycast"
+    "rectangle"
     "spotify"
     "steam"
     "vlc"
