@@ -4,13 +4,12 @@
   inputs = {
     # Package sets
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-22.11-darwin";
-    nixpkgs-unstable.url = github:NixOS/nixpkgs/nixpkgs-unstable;
 
     # Environment/system management
     darwin.url = "github:LnL7/nix-darwin";
-    darwin.inputs.nixpkgs.follows = "nixpkgs-unstable";
+    darwin.inputs.nixpkgs.follows = "nixpkgs";
     home-manager.url = "github:nix-community/home-manager";
-    home-manager.inputs.nixpkgs.follows = "nixpkgs-unstable";
+    home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
     # Other sources
   };
@@ -18,7 +17,7 @@
   outputs = { self, nixpkgs, darwin, home-manager, ... }@inputs:
     let
       inherit (darwin.lib) darwinSystem;
-      inherit (inputs.nixpkgs-unstable.lib) attrValues optionalAttrs singleton;
+      inherit (inputs.nixpkgs.lib) attrValues optionalAttrs singleton;
 
       # Configuration for `nixpkgs`
       nixpkgsConfig = {
@@ -26,13 +25,6 @@
           allowUnfree = true;
           allowUnfreePredicate = (pkg: true);
         };
-        overlays = attrValues self.overlays ++ singleton (
-          # Sub in x86 version of packages that don't build on Apple Silicon yet
-          final: prev: (optionalAttrs (prev.stdenv.system == "aarch64-darwin") {
-            inherit (final.pkgs-x86)
-              discord;
-          })
-        );
       };
 
       nixDarwinCommonModules = attrValues self.darwinModules ++ [
@@ -104,17 +96,6 @@
               '';
             };
           };
-      };
-
-      overlays = {
-        # Overlay useful on Macs with Apple Silicon
-        apple-silicon = final: prev: optionalAttrs (prev.stdenv.system == "aarch64-darwin") {
-          # Add access to x86 packages system is running Apple Silicon
-          pkgs-x86 = import inputs.nixpkgs-unstable {
-            system = "x86_64-darwin";
-            inherit (nixpkgsConfig) config;
-          };
-        };
       };
     };
 }

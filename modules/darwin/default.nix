@@ -20,7 +20,7 @@
     '';
 
     settings = {
-      trustedUsers = [
+      trusted-users = [
         "@admin"
       ];
 
