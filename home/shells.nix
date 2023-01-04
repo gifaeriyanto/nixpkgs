@@ -94,7 +94,10 @@
         dr = "darwin-rebuild switch --flake";
 
         # is equivalent to: nix build --recreate-lock-file
-        flakeup = "nix flake update ~/.config/nixpkgs/";
+        flakeup-all = "nix flake update ~/.config/nixpkgs/";
+        # example: 
+        # $ flakeup home-manager
+        flakeup = "nix flake lock ~/.config/nixpkgs/ --update-input";
         nb = "nix build";
         nd = "nix develop";
         nf = "nix flake";
