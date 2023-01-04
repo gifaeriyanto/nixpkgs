@@ -58,13 +58,13 @@
     in
     {
       darwinConfigurations = {
-        gifaeriyanto = darwinSystem {
+        gifaeriyanto-mac = darwinSystem {
           # system = "x86_64-darwin"; // if using intel
           system = "aarch64-darwin";
           modules = nixDarwinCommonModules ++ [
             {
-              networking.computerName = "gifaeriyanto";
-              networking.hostName = "gifaeriyanto";
+              networking.computerName = "gifaeriyanto-mac";
+              networking.hostName = "gifaeriyanto-mac";
             }
           ];
         };
