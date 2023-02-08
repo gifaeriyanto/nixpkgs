@@ -49,6 +49,7 @@ in
 
   # Prefer installing application from the Mac App Store
   homebrew.masApps = {
+    HiddenBar = 1452453066;
     Keynote = 409183694;
     Numbers = 409203825;
     Pages = 409201541;
@@ -75,6 +76,7 @@ in
     "notion"
     "raycast"
     "rectangle"
+    "shottr"
     "spotify"
     "steam"
     "vlc"
