@@ -49,6 +49,7 @@ in
 
   # Prefer installing application from the Mac App Store
   homebrew.masApps = {
+    DropOver = 1355679052;
     HiddenBar = 1452453066;
     Keynote = 409183694;
     Numbers = 409203825;
