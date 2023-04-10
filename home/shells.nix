@@ -26,6 +26,11 @@
           end
         '';
 
+        git-branch-update-current = ''
+          set currentBranch $(git rev-parse --abbrev-ref HEAD)
+          git pull origin $currentBranch
+        '';
+
         git-lazy-rebase = ''
           set branch $argv[1]
 
