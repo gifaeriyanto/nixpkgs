@@ -86,6 +86,12 @@
           # back to working branch
           git checkout $currentBranch
         '';
+
+        kill-port = ''
+          lsof -i :$argv[1]
+          read -p "Enter PID to kill: " pid
+          sudo kill -9 $pid
+        '';
       };
 
       # Fish abbreviations
