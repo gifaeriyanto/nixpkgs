@@ -70,23 +70,6 @@
           end
         '';
 
-        git-spenmo-preview = ''
-          set currentBranch $(git rev-parse --abbrev-ref HEAD)
-          set previewBranch preview/$currentBranch
-
-          # delete existing branch (if any)
-          if test $(git rev-parse --verify --quiet $previewBranch)
-            git-delete-branch $previewBranch
-          end
-
-          # create preview
-          git checkout -b $previewBranch
-          git push origin $previewBranch
-
-          # back to working branch
-          git checkout $currentBranch
-        '';
-
         kill-port = ''
           lsof -i :$argv[1]
           read -p "Enter PID to kill: " pid
