@@ -33,21 +33,13 @@ git clone https://github.com/gifaeriyanto/nixpkgs.git ~/.config/nixpkgs
 5. Run build in `nixpkgs` folder
 
 ```bash
-# for Intel Chip
-nix build .#darwinConfigurations.gifaeriyanto.intel.system
-
-# for M1 Chip
-nix build .#darwinConfigurations.gifaeriyanto.m1.system
+nix build .#darwinConfigurations.gifaeriyanto-mac.system
 ```
 
 6. Apply result
 
 ```bash
-# for Intel Chip
-./result/sw/bin/darwin-rebuild switch --flake .#gifaeriyanto.intel
-
-# for M1 Chip
-./result/sw/bin/darwin-rebuild switch --flake .#gifaeriyanto.m1
+./result/sw/bin/darwin-rebuild switch --flake .#gifaeriyanto-mac
 ```
 
 ## Notes (after installation)
