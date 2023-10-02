@@ -59,7 +59,6 @@ in
   # limitiations, e.g., Transmit, install the Homebrew Cask.
   homebrew.casks = [
     "discord"
-    "docker"
     "firefox"
     "google-chrome"
     "iterm2"
