@@ -68,7 +68,6 @@ in
     "shottr"
     "spotify"
     "steam"
-    "vlc"
     "zoom"
   ];
 }
