@@ -46,7 +46,7 @@ in
     Slack = 803453959;
     Telegram = 747648890;
     Whatsapp = 1147396723;
-    Xcode = 497799835;
+    # Xcode = 497799835;
   };
 
   homebrew.brews = [
