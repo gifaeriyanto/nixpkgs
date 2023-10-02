@@ -36,17 +36,6 @@ in
     upgrade = true;
   };
 
-
-  homebrew.taps = [
-    "homebrew/cask"
-    "homebrew/cask-drivers"
-    "homebrew/cask-fonts"
-    "homebrew/cask-versions"
-    "homebrew/core"
-    "homebrew/services"
-    "nrlquaker/createzap"
-  ];
-
   # Prefer installing application from the Mac App Store
   homebrew.masApps = {
     DropOver = 1355679052;
