@@ -51,6 +51,7 @@ in
 
   homebrew.brews = [
     "n"
+    "ngrok/ngrok/ngrok"
     "pinentry-mac"
     "yarn"
   ];
