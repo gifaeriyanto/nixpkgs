@@ -51,7 +51,6 @@ in
 
   homebrew.brews = [
     "n"
-    "ngrok/ngrok/ngrok"
     "pinentry-mac"
     "yarn"
   ];
@@ -63,6 +62,7 @@ in
     "firefox"
     "google-chrome"
     "iterm2"
+    "ngrok"
     "notion"
     "raycast"
     "rectangle"
