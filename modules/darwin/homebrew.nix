@@ -58,17 +58,17 @@ in
   # If an app isn't available in the Mac App Store, or the version in the App Store has
   # limitiations, e.g., Transmit, install the Homebrew Cask.
   homebrew.casks = [
+    "arc"
     "discord"
-    "firefox"
     "google-chrome"
     "iterm2"
-    "ngrok"
     "notion"
     "raycast"
     "rectangle"
     "shottr"
     "spotify"
     "steam"
+    "visual-studio-code"
     "zoom"
   ];
 }

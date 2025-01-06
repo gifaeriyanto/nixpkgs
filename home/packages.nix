@@ -52,7 +52,6 @@
       ghq
       micro
       nixpkgs-fmt
-      vscode
     ];
   };
 }
