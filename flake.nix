@@ -63,7 +63,7 @@
           system = "aarch64-darwin";
           modules = nixDarwinCommonModules ++ [
             {
-              networking.computerName = "Gifa Eriyanto MacBook Pro";
+              networking.computerName = "Gifa Eriyanto";
               networking.hostName = "gifaeriyanto-mac";
             }
           ];

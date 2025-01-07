@@ -52,6 +52,21 @@
       ghq
       micro
       nixpkgs-fmt
+
+      ##################################
+      # AI Development Tools
+      ##################################
+      python310
+      python310Packages.pip
+      python310Packages.virtualenv
+      python310Packages.numpy
+      python310Packages.scipy
+      python310Packages.pandas
+      python310Packages.matplotlib
+      python310Packages.jupyter
+      python310Packages.scikit-learn
+      python310Packages.tensorflow
+      python310Packages.pytorch
     ];
   };
 }
