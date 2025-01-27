@@ -52,12 +52,6 @@
       ghq
       micro
       nixpkgs-fmt
-
-      ##################################
-      # AI Development Tools
-      ##################################
-      python310
-      python310Packages.pip
     ];
   };
 }
