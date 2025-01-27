@@ -45,7 +45,7 @@ in
     Pages = 409201541;
     Slack = 803453959;
     Telegram = 747648890;
-    Whatsapp = 1147396723;
+    # Whatsapp = 1147396723;
     # Xcode = 497799835;
   };
 
