@@ -38,7 +38,7 @@ in
 
   # Prefer installing application from the Mac App Store
   homebrew.masApps = {
-    DropOver = 1355679052;
+    # DropOver = 1355679052;
     HiddenBar = 1452453066;
     Keynote = 409183694;
     Numbers = 409203825;
@@ -62,14 +62,14 @@ in
     "arc"
     "capcut"
     "discord"
-    "google-chrome"
+    # "google-chrome"
     "iterm2"
     "notion"
     "raycast"
     "rectangle"
-    "shottr"
+    # "shottr"
     "spotify"
-    "steam"
+    # "steam"
     "visual-studio-code"
     "zoom"
   ];
